@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [UVB LED Controller.PrjPcb]
+   Generated File[UVB LED Controller-Plated.TXT]
+   Generated File[UVB LED Controller-NonPlated.TXT]
+   Generated File[UVB LED Controller.LDP]
+   Generated File[UVB LED Controller.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 11:00:17 AM On 21/02/2024

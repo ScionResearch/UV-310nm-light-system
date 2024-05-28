@@ -1,0 +1,4276 @@
+[
+    {
+        "id": "0f4b8546c8ac122a",
+        "type": "tab",
+        "label": "Harware flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2a758133b0094d6f",
+        "type": "tab",
+        "label": "UI flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "914642c8dabf93ae",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "05fb5fe7c39179dc",
+        "type": "junction",
+        "z": "0f4b8546c8ac122a",
+        "x": 540,
+        "y": 440,
+        "wires": [
+            [
+                "0543c3c5b7da396b",
+                "7aa016455d981147",
+                "ed061463758a0a3d"
+            ]
+        ]
+    },
+    {
+        "id": "5a64ead17e79d555",
+        "type": "junction",
+        "z": "0f4b8546c8ac122a",
+        "x": 560,
+        "y": 640,
+        "wires": [
+            [
+                "4b1543020c63f65b",
+                "e5852a3679ab175c",
+                "90c51a69dba2913c"
+            ]
+        ]
+    },
+    {
+        "id": "06484c35c616c23a",
+        "type": "junction",
+        "z": "0f4b8546c8ac122a",
+        "x": 1280,
+        "y": 560,
+        "wires": [
+            [
+                "994ba41ac5ba68ea",
+                "65cc7af9478a3482",
+                "a19abab8842826f1"
+            ]
+        ]
+    },
+    {
+        "id": "da7900f42c2e4872",
+        "type": "junction",
+        "z": "0f4b8546c8ac122a",
+        "x": 280,
+        "y": 920,
+        "wires": [
+            [
+                "10a7be975e7624d7",
+                "88893153d9b9899d",
+                "d391161fc005cf21"
+            ]
+        ]
+    },
+    {
+        "id": "0ff185a5517baaac",
+        "type": "ui_group",
+        "name": "Program",
+        "tab": "98b4b5e6330d335f",
+        "order": 2,
+        "disp": true,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fed0412aa51fdfae",
+        "type": "ui_group",
+        "name": "Setup",
+        "tab": "98b4b5e6330d335f",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "98b4b5e6330d335f",
+        "type": "ui_tab",
+        "name": "Auto control program",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "77830e0be051c745",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#fe410b",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "UV LED controller theme",
+                "default": "#4B7930",
+                "baseColor": "#ff410a",
+                "baseFont": "Arial,Arial,Helvetica,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#ff410a",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#ff410a",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#0a0a0a",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "group-textColor": {
+                    "value": "#ff410a",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#282828",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "widget-backgroundColor": {
+                    "value": "#ff410a",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#323232",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "Arial,Arial,Helvetica,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "UV Control Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "mouse",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 40,
+                "sy": 24,
+                "gx": 6,
+                "gy": 4,
+                "cx": 6,
+                "cy": 6,
+                "px": 6,
+                "py": 6
+            }
+        }
+    },
+    {
+        "id": "8ad95d5030a0f276",
+        "type": "ui_group",
+        "name": "Controls",
+        "tab": "7881d30635881b19",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7881d30635881b19",
+        "type": "ui_tab",
+        "name": "Main",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "665c446af83f1f5f",
+        "type": "ui_group",
+        "name": "Status",
+        "tab": "7881d30635881b19",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "af1c130c511722f1",
+        "type": "ui_spacer",
+        "z": "0f4b8546c8ac122a",
+        "name": "spacer",
+        "group": "8ad95d5030a0f276",
+        "order": 8,
+        "width": "8",
+        "height": "1"
+    },
+    {
+        "id": "ea3a255d929b10a9",
+        "type": "ui_spacer",
+        "z": "0f4b8546c8ac122a",
+        "name": "spacer",
+        "group": "8ad95d5030a0f276",
+        "order": 5,
+        "width": "8",
+        "height": "1"
+    },
+    {
+        "id": "94c3c115ab1b971e",
+        "type": "ui_spacer",
+        "z": "2a758133b0094d6f",
+        "name": "spacer",
+        "group": "0ff185a5517baaac",
+        "order": 2,
+        "width": "9",
+        "height": "8"
+    },
+    {
+        "id": "0df4552f9d69039d",
+        "type": "ui_group",
+        "name": "DEFAULT",
+        "tab": "f3a8a67ff0904e39",
+        "order": 1,
+        "disp": false,
+        "width": "44",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f3a8a67ff0904e39",
+        "type": "ui_tab",
+        "name": "HOME",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "49a286719aebc51b",
+        "type": "rpi-gpio out",
+        "z": "0f4b8546c8ac122a",
+        "name": "Status LED",
+        "pin": "19",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 450,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "abcc39034ce8db66",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "815d14ac967db042"
+            ]
+        ]
+    },
+    {
+        "id": "815d14ac967db042",
+        "type": "trigger",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "500",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "49a286719aebc51b"
+            ]
+        ]
+    },
+    {
+        "id": "8c90e17b7093f645",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "06478e4fd7220938"
+            ]
+        ]
+    },
+    {
+        "id": "0543c3c5b7da396b",
+        "type": "rpi-gpio out",
+        "z": "0f4b8546c8ac122a",
+        "name": "Ch 1 PWM",
+        "pin": "16",
+        "set": "",
+        "level": "0",
+        "freq": "1000",
+        "out": "pwm",
+        "bcm": true,
+        "x": 690,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "db9d4819ab192e0d",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "Off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "100",
+        "payloadType": "num",
+        "x": 350,
+        "y": 380,
+        "wires": [
+            [
+                "05fb5fe7c39179dc"
+            ]
+        ]
+    },
+    {
+        "id": "7aa016455d981147",
+        "type": "rpi-gpio out",
+        "z": "0f4b8546c8ac122a",
+        "name": "Ch 2 PWM",
+        "pin": "20",
+        "set": "",
+        "level": "0",
+        "freq": "1000",
+        "out": "pwm",
+        "bcm": true,
+        "x": 690,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ed061463758a0a3d",
+        "type": "rpi-gpio out",
+        "z": "0f4b8546c8ac122a",
+        "name": "Ch 3 PWM",
+        "pin": "21",
+        "set": "",
+        "level": "0",
+        "freq": "1000",
+        "out": "pwm",
+        "bcm": true,
+        "x": 690,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "0855684ba4ba0433",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Steinhart-Hart equation",
+        "func": "const sensorNum = msg.topic;\n\n// Constants for the Steinhart-Hart equation\nconst A = 0.001125308852122;\nconst B = 0.000234711863267;\nconst C = 0.000000085663516;\n\nconst vcc = 3.3;\nconst resistance_R2 = 10000;\n\n// Function to convert ADC raw value to temperature in degrees Celsius\nfunction adcToTemp(rawValue) {\n    // Convert ADC raw value to voltage\n    const voltage_R2 = rawValue / 1023 * vcc;\n\n    const voltage_Therm = vcc - voltage_R2;\n\n    const current = voltage_R2 / resistance_R2;\n\n    // Calculate resistance of the thermistor\n    const resistance = voltage_Therm / current;\n    \n    // Calculate temperature using Steinhart-Hart equation\n    const temperature = 1 / (A + B * Math.log(resistance) + C * Math.pow(Math.log(resistance), 3)) - 273.15;\n    \n    return temperature;\n}\n\nconst temperatureCelsius = adcToTemp(msg.payload);\nmsg.payload = temperatureCelsius;\n\n// Check for overheating\nif (temperatureCelsius > 70) {\n    const overheatText = (\"Overheat! Sensor \" + sensorNum + \" reading \" + temperatureCelsius + \" °C!!! Shutting down...\");\n    const msgOverheat = {payload:overheatText};\n    return [msg, msgOverheat];\n}\n\nreturn msg;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 300,
+        "wires": [
+            [
+                "1946e8cd9c767444"
+            ],
+            [
+                "0a247ecd8dca0be4",
+                "a222a1d07506ef6c"
+            ]
+        ]
+    },
+    {
+        "id": "994ba41ac5ba68ea",
+        "type": "rpi-gpio out",
+        "z": "0f4b8546c8ac122a",
+        "name": "Fan 1 PWM",
+        "pin": "6",
+        "set": false,
+        "level": "0",
+        "freq": "100",
+        "out": "pwm",
+        "bcm": true,
+        "x": 1410,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "65cc7af9478a3482",
+        "type": "rpi-gpio out",
+        "z": "0f4b8546c8ac122a",
+        "name": "Fan 2 PWM",
+        "pin": "13",
+        "set": "",
+        "level": "0",
+        "freq": "100",
+        "out": "pwm",
+        "bcm": true,
+        "x": 1410,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "ec7d82076836fe6b",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "Fans ON full",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "100",
+        "payloadType": "num",
+        "x": 1150,
+        "y": 560,
+        "wires": [
+            [
+                "06484c35c616c23a"
+            ]
+        ]
+    },
+    {
+        "id": "508c90b20a26be89",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "Fans OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 1140,
+        "y": 620,
+        "wires": [
+            [
+                "06484c35c616c23a"
+            ]
+        ]
+    },
+    {
+        "id": "399e8acb5906307f",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "Half",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "05fb5fe7c39179dc"
+            ]
+        ]
+    },
+    {
+        "id": "3b121b0c2c9d6eee",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "Full",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 350,
+        "y": 500,
+        "wires": [
+            [
+                "05fb5fe7c39179dc"
+            ]
+        ]
+    },
+    {
+        "id": "ee743772fe4e9fdc",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Temperature format for PID",
+        "func": "const temperature = msg.payload;\nconst statusMsg = (\"Temperature: \" + temperature + \"°C\");\nlet fillColour = \"blue\";\nif (temperature > 50) fillColour = \"red\";\nelse if (temperature > 40) fillColour = \"yellow\";\nnode.status({fill:fillColour,shape:\"ring\",text:statusMsg});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 440,
+        "wires": [
+            [
+                "764cf0b9ffcc9d48"
+            ]
+        ]
+    },
+    {
+        "id": "989fe44f3b9829f3",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "Enable PID control",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "auto",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb1a6a4a31f590a1",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "flip and scale fan control value",
+        "func": "const inVal = msg.payload;\nlet outVal = (1 - inVal) * 100;\nif (outVal > 100) outVal = 100;\nelse if (outVal < 0) outVal = 0;\nmsg.payload = outVal.toFixed(1);\nconst statusMsg = (\"In: \" + inVal.toFixed(3) + \" .. Out: \" + outVal.toFixed(1));\nnode.status({fill:\"green\",shape:\"ring\",text:statusMsg});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 500,
+        "wires": [
+            [
+                "06484c35c616c23a"
+            ]
+        ]
+    },
+    {
+        "id": "e7c724d407e1d0af",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "Temp setpoint",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "SV",
+        "payload": "30",
+        "payloadType": "num",
+        "x": 900,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06478e4fd7220938",
+        "type": "pimcp3008",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "dev": "3008",
+        "pin": "M",
+        "dnum": 0,
+        "bus": 0,
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "0855684ba4ba0433"
+            ]
+        ]
+    },
+    {
+        "id": "22ec7967bf4a57a5",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Pre-load previous value",
+        "func": "const uvLevel = global.get('uvLevel');\nmsg.payload = uvLevel;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 700,
+        "wires": [
+            [
+                "e059408dafdb4625",
+                "5a64ead17e79d555"
+            ]
+        ]
+    },
+    {
+        "id": "e059408dafdb4625",
+        "type": "ui_slider",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "label": "UV level",
+        "tooltip": "",
+        "group": "8ad95d5030a0f276",
+        "order": 7,
+        "width": "8",
+        "height": "2",
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 600,
+        "y": 720,
+        "wires": [
+            [
+                "5a64ead17e79d555"
+            ]
+        ]
+    },
+    {
+        "id": "4b1543020c63f65b",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Transform for inverse PWM",
+        "func": "const newLevel = 100 - msg.payload;\nglobal.set('uvLevel', msg.payload);\nmsg.payload = newLevel.toFixed(1);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 560,
+        "wires": [
+            [
+                "05fb5fe7c39179dc"
+            ]
+        ]
+    },
+    {
+        "id": "1a0924b5dee7ae10",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.4",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "06478e4fd7220938"
+            ]
+        ]
+    },
+    {
+        "id": "f5a2da91ad47df91",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.7",
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "06478e4fd7220938"
+            ]
+        ]
+    },
+    {
+        "id": "1946e8cd9c767444",
+        "type": "smooth",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "9",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 900,
+        "y": 380,
+        "wires": [
+            [
+                "ee743772fe4e9fdc",
+                "ab1ea04b6d069eed"
+            ]
+        ]
+    },
+    {
+        "id": "9c73470160a139d9",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "Startup",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 140,
+        "y": 640,
+        "wires": [
+            [
+                "22ec7967bf4a57a5"
+            ]
+        ]
+    },
+    {
+        "id": "ab1ea04b6d069eed",
+        "type": "ui_gauge",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "group": "665c446af83f1f5f",
+        "order": 5,
+        "width": "4",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Panel temperature",
+        "label": "",
+        "format": "{{value}} °C",
+        "min": "20",
+        "max": "80",
+        "colors": [
+            "#0ae60d",
+            "#fbff00",
+            "#ff0000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1150,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e5852a3679ab175c",
+        "type": "ui_gauge",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "group": "665c446af83f1f5f",
+        "order": 2,
+        "width": "4",
+        "height": "6",
+        "gtype": "donut",
+        "title": "UV output level",
+        "label": "",
+        "format": "{{value}} %",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#cc9afe",
+            "#cc9afe",
+            "#cc9afe"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 720,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "a3b78362543cf468",
+        "type": "ui_switch",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "label": "Auto control",
+        "tooltip": "",
+        "group": "8ad95d5030a0f276",
+        "order": 1,
+        "width": "8",
+        "height": "2",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 650,
+        "y": 860,
+        "wires": [
+            [
+                "99aac5017d94c230"
+            ]
+        ]
+    },
+    {
+        "id": "0ce1ca184d424d76",
+        "type": "ui_button",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "group": "8ad95d5030a0f276",
+        "order": 3,
+        "width": "4",
+        "height": "2",
+        "passthru": false,
+        "label": "Run",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.background}}",
+        "className": "",
+        "icon": "play_arrow",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 920,
+        "wires": [
+            [
+                "0742155d5b32a5d1"
+            ]
+        ]
+    },
+    {
+        "id": "2380f7157b2d6d31",
+        "type": "ui_button",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "group": "8ad95d5030a0f276",
+        "order": 4,
+        "width": "4",
+        "height": "2",
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.background}}",
+        "className": "",
+        "icon": "stop",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 630,
+        "y": 980,
+        "wires": [
+            [
+                "d73de8de3db36e37"
+            ]
+        ]
+    },
+    {
+        "id": "589b5aadfce9a886",
+        "type": "ui_button",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "group": "8ad95d5030a0f276",
+        "order": 9,
+        "width": "4",
+        "height": "2",
+        "passthru": false,
+        "label": "Shutdown",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "power_settings_new",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 640,
+        "y": 1040,
+        "wires": [
+            [
+                "4e02d1c4b2c2227d"
+            ]
+        ]
+    },
+    {
+        "id": "41648c1d21d76b8a",
+        "type": "ui_button",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "group": "8ad95d5030a0f276",
+        "order": 10,
+        "width": "4",
+        "height": "2",
+        "passthru": false,
+        "label": "Restart",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 640,
+        "y": 1100,
+        "wires": [
+            [
+                "bca0b5ac82939d23"
+            ]
+        ]
+    },
+    {
+        "id": "86f3b58f65815026",
+        "type": "shutdown",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "x": 1620,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "41709c8ef6916434",
+        "type": "restart",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "x": 1610,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "24806111769849a2",
+        "type": "ui_toast",
+        "z": "0f4b8546c8ac122a",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1110,
+        "y": 1100,
+        "wires": [
+            [
+                "fe7b150275467cc8"
+            ]
+        ]
+    },
+    {
+        "id": "bca0b5ac82939d23",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Confirm reboot message",
+        "func": "msg.topic = \"Restart Comfirmation\";\nmsg.payload = \"Are you sure you want to reboot?\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1100,
+        "wires": [
+            [
+                "24806111769849a2"
+            ]
+        ]
+    },
+    {
+        "id": "fe7b150275467cc8",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Confirm response process",
+        "func": "if (msg.payload === 'OK') return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 1100,
+        "wires": [
+            [
+                "41709c8ef6916434"
+            ]
+        ]
+    },
+    {
+        "id": "f2aa3a69d24a0685",
+        "type": "ui_toast",
+        "z": "0f4b8546c8ac122a",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1110,
+        "y": 1040,
+        "wires": [
+            [
+                "8928d4c7f10cd754"
+            ]
+        ]
+    },
+    {
+        "id": "4e02d1c4b2c2227d",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Confirm shutdown message",
+        "func": "msg.topic = \"Shutdown Comfirmation\";\nmsg.payload = \"Are you sure you want to shutdown? To restart after shutdown power must be disconnected and re-connected\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1040,
+        "wires": [
+            [
+                "f2aa3a69d24a0685"
+            ]
+        ]
+    },
+    {
+        "id": "8928d4c7f10cd754",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Confirm response process",
+        "func": "if (msg.payload === 'OK') return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 1040,
+        "wires": [
+            [
+                "86f3b58f65815026"
+            ]
+        ]
+    },
+    {
+        "id": "10a7be975e7624d7",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Set run btn fmt",
+        "func": "let runBtnState = !global.get('runState');\nlet autoEnabled = global.get('autoEnabled');\nif (!autoEnabled) runBtnState = false;\nlet colour = '#888888'\n\nif (runBtnState) colour = '#00aa00';\n\nmsg = {enabled:runBtnState, background:colour};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 920,
+        "wires": [
+            [
+                "0ce1ca184d424d76"
+            ]
+        ]
+    },
+    {
+        "id": "88893153d9b9899d",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Set stop btn fmt",
+        "func": "let stopBtnState = global.get('runState');\nlet autoEnabled = global.get('autoEnabled');\nif (!autoEnabled) stopBtnState = false;\nlet colour = '#888888'\n\nif (stopBtnState) colour = '#aa0000';\n\nmsg = {enabled:stopBtnState, background:colour};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 980,
+        "wires": [
+            [
+                "2380f7157b2d6d31"
+            ]
+        ]
+    },
+    {
+        "id": "99aac5017d94c230",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Auto switch handler",
+        "func": "if (msg.payload == false) {\n    global.set('autoEnabled', false);\n    global.set('runState', false);\n}\nelse global.set('autoEnabled', true);\nmsg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 860,
+        "wires": [
+            [
+                "5d21aee4f4e538ac"
+            ]
+        ]
+    },
+    {
+        "id": "55b58f9cef2357a4",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Set initial state of auto switch",
+        "func": "msg.payload = global.get('autoEnabled');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 820,
+        "wires": [
+            [
+                "a3b78362543cf468"
+            ]
+        ]
+    },
+    {
+        "id": "8dd723323123df0a",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "Startup",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 140,
+        "y": 860,
+        "wires": [
+            [
+                "da7900f42c2e4872",
+                "55b58f9cef2357a4"
+            ]
+        ]
+    },
+    {
+        "id": "0742155d5b32a5d1",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Run handler",
+        "func": "if (msg.payload == true) {\n    global.set('runState', true);\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 920,
+        "wires": [
+            [
+                "f45044e9f49edb04"
+            ]
+        ]
+    },
+    {
+        "id": "d73de8de3db36e37",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Stop handler",
+        "func": "if (msg.payload == true) {\n    global.set('runState', false);\n    msg.payload = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 980,
+        "wires": [
+            [
+                "296bf91a55db13e0"
+            ]
+        ]
+    },
+    {
+        "id": "0fd5b02b7dc34841",
+        "type": "ui_text",
+        "z": "0f4b8546c8ac122a",
+        "group": "8ad95d5030a0f276",
+        "order": 6,
+        "width": "8",
+        "height": "2",
+        "name": "",
+        "label": "Manual control",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 680,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "b5149a4d97baf9da",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Run program update",
+        "func": "const running = global.get('runState');\n\nif (running) {\n    // Get current timestamp, offset for timezone and zero adjust\n    const dateTime = new Date();\n    const tzOffset = dateTime.getTimezoneOffset() * 60 * 1000;\n    const unixtime = dateTime.getTime() + tzOffset;\n    const millisInOneDay = 24 * 60 * 60 * 1000;\n    const millisToday = unixtime % millisInOneDay;\n\n    // Get current time range from program array\n    const progArray = global.get('run_prog_array');\n    let ptr = 0;\n    for (let i = 19; i >= 0; i--) {\n        if (progArray[i][0] < millisToday) {\n            ptr = i;\n            break;\n        }\n    }\n\n    let ptr2 = ptr + 1;\n    if (ptr2 > 19) ptr2 = 0;\n    const tmRangeStart = progArray[ptr][0];\n    const tmRangeEnd = progArray[ptr2][0];\n    const tmRangePositionFactor = (millisToday - tmRangeStart) / (tmRangeEnd - tmRangeStart);\n    const uvRangeStart = progArray[ptr][1];\n    const uvRangeEnd = progArray[ptr2][1];\n    const uvLevelNow = uvRangeStart + ((uvRangeEnd - uvRangeStart) * tmRangePositionFactor);\n\n    /*msg.payload = { 'ptr':ptr,\n                    'tmRangeStart':tmRangeStart/(60*60*1000),\n                    'tmRangeEnd':tmRangeEnd/(60*60*1000),\n                    'tmRangePositionFactor':tmRangePositionFactor,\n                    'uvRangeStart':uvRangeStart,\n                    'uvRangeEnd':uvRangeEnd,\n                    'uvLevelNow':uvLevelNow};*/\n    \n    const uvLevel = global.get('uvLevel');\n    const uvLevelNowRounded = uvLevelNow.toFixed(1);\n    if (uvLevel != uvLevelNowRounded) {\n        msg.payload = uvLevelNowRounded;\n        return msg;\n    }\n}\n    \nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 740,
+        "wires": [
+            [
+                "584d0f14158ca5c2",
+                "fa996fe588975def"
+            ]
+        ]
+    },
+    {
+        "id": "14db36d17cecf2a7",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 1250,
+        "y": 740,
+        "wires": [
+            [
+                "b5149a4d97baf9da"
+            ]
+        ]
+    },
+    {
+        "id": "584d0f14158ca5c2",
+        "type": "debug",
+        "z": "0f4b8546c8ac122a",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "d391161fc005cf21",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Set UV level enable state",
+        "func": "let autoMode = global.get('autoEnabled');\nmsg = {enabled:!autoMode};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 760,
+        "wires": [
+            [
+                "e059408dafdb4625"
+            ]
+        ]
+    },
+    {
+        "id": "a19abab8842826f1",
+        "type": "ui_gauge",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "group": "665c446af83f1f5f",
+        "order": 6,
+        "width": "4",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Fan speed",
+        "label": "",
+        "format": "{{value}} %",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#ffffff",
+            "#8694fe",
+            "#1f39ff"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1410,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "eb21e3ceb75e6384",
+        "type": "ui_text",
+        "z": "0f4b8546c8ac122a",
+        "group": "665c446af83f1f5f",
+        "order": 1,
+        "width": "4",
+        "height": "2",
+        "name": "",
+        "label": "Time:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1590,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "caa56b0d71683998",
+        "type": "ui_text",
+        "z": "0f4b8546c8ac122a",
+        "group": "665c446af83f1f5f",
+        "order": 3,
+        "width": "4",
+        "height": "2",
+        "name": "",
+        "label": "Mode:",
+        "format": "<font color={{fcolor}}>{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1590,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "4de350e4c42ef73b",
+        "type": "ui_text",
+        "z": "0f4b8546c8ac122a",
+        "group": "665c446af83f1f5f",
+        "order": 4,
+        "width": "4",
+        "height": "2",
+        "name": "",
+        "label": "Status:",
+        "format": "<font color={{fcolor}}>{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1600,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "967c4abd2eb8e49e",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Get date/time",
+        "func": "let dateTime = new Date();\nmsg.payload = dateTime.toLocaleTimeString();\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 820,
+        "wires": [
+            [
+                "eb21e3ceb75e6384"
+            ]
+        ]
+    },
+    {
+        "id": "85306ed2e71d707e",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "1s trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 1230,
+        "y": 820,
+        "wires": [
+            [
+                "967c4abd2eb8e49e",
+                "b5149a4d97baf9da"
+            ]
+        ]
+    },
+    {
+        "id": "2ef7737151a5c605",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Get mode",
+        "func": "let autoMode = global.get('autoEnabled');\nif (autoMode) msg = {payload:\"Auto\", fcolor:\"2233ff\"};\nelse msg = {payload:\"Manual\", fcolor:\"#ffdd00\"};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1400,
+        "y": 860,
+        "wires": [
+            [
+                "caa56b0d71683998"
+            ]
+        ]
+    },
+    {
+        "id": "5d21aee4f4e538ac",
+        "type": "link out",
+        "z": "0f4b8546c8ac122a",
+        "name": "Auto switch state change",
+        "mode": "link",
+        "links": [
+            "95472e2d92c1b5cd",
+            "de51d2e7f4cc829c",
+            "d94a20b7694cb8e4",
+            "dd6364920856c34d",
+            "f9723935afa0959c"
+        ],
+        "x": 1005,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "95472e2d92c1b5cd",
+        "type": "link in",
+        "z": "0f4b8546c8ac122a",
+        "name": "Mode change trigger",
+        "links": [
+            "5d21aee4f4e538ac"
+        ],
+        "x": 1285,
+        "y": 860,
+        "wires": [
+            [
+                "2ef7737151a5c605"
+            ]
+        ]
+    },
+    {
+        "id": "f377ad2b543a0c6b",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Get status",
+        "func": "let autoMode = global.get('autoEnabled');\nlet running = global.get('runState');\nlet uvLevel = global.get('uvLevel');\nif (autoMode && running) msg = {payload:\"Running\", fcolor:\"#22ff22\"};\nelse if (autoMode && !running) msg = { payload: \"Stopped\", fcolor: \"aa0000\" };\nelse if (uvLevel > 0) msg = { payload: \"UV on\", fcolor: \"5500ff\" };\nelse msg.payload = msg = { payload: \"UV off\", fcolor: \"aaaaaa\" };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 900,
+        "wires": [
+            [
+                "4de350e4c42ef73b"
+            ]
+        ]
+    },
+    {
+        "id": "f45044e9f49edb04",
+        "type": "link out",
+        "z": "0f4b8546c8ac122a",
+        "name": "Run trigger",
+        "mode": "link",
+        "links": [
+            "d94a20b7694cb8e4",
+            "dd6364920856c34d"
+        ],
+        "x": 1005,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "296bf91a55db13e0",
+        "type": "link out",
+        "z": "0f4b8546c8ac122a",
+        "name": "Stop trigger",
+        "mode": "link",
+        "links": [
+            "d94a20b7694cb8e4",
+            "dd6364920856c34d",
+            "f9723935afa0959c"
+        ],
+        "x": 1005,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "d94a20b7694cb8e4",
+        "type": "link in",
+        "z": "0f4b8546c8ac122a",
+        "name": "link in 1",
+        "links": [
+            "296bf91a55db13e0",
+            "5d21aee4f4e538ac",
+            "f45044e9f49edb04"
+        ],
+        "x": 205,
+        "y": 920,
+        "wires": [
+            [
+                "da7900f42c2e4872"
+            ]
+        ]
+    },
+    {
+        "id": "dd6364920856c34d",
+        "type": "link in",
+        "z": "0f4b8546c8ac122a",
+        "name": "Mode change trigger",
+        "links": [
+            "296bf91a55db13e0",
+            "5d21aee4f4e538ac",
+            "90c51a69dba2913c",
+            "f45044e9f49edb04"
+        ],
+        "x": 1285,
+        "y": 900,
+        "wires": [
+            [
+                "f377ad2b543a0c6b"
+            ]
+        ]
+    },
+    {
+        "id": "90c51a69dba2913c",
+        "type": "link out",
+        "z": "0f4b8546c8ac122a",
+        "name": "UV level state change",
+        "mode": "link",
+        "links": [
+            "dd6364920856c34d"
+        ],
+        "x": 655,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f9723935afa0959c",
+        "type": "link in",
+        "z": "0f4b8546c8ac122a",
+        "name": "Update UV level",
+        "links": [
+            "296bf91a55db13e0",
+            "5d21aee4f4e538ac",
+            "fa996fe588975def"
+        ],
+        "x": 465,
+        "y": 640,
+        "wires": [
+            [
+                "e059408dafdb4625",
+                "5a64ead17e79d555"
+            ]
+        ]
+    },
+    {
+        "id": "fa996fe588975def",
+        "type": "link out",
+        "z": "0f4b8546c8ac122a",
+        "name": "Run program updated",
+        "mode": "link",
+        "links": [
+            "f9723935afa0959c"
+        ],
+        "x": 1615,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "0a247ecd8dca0be4",
+        "type": "ui_toast",
+        "z": "0f4b8546c8ac122a",
+        "position": "top left",
+        "displayTime": "60",
+        "highlight": "#ff0000",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 890,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a222a1d07506ef6c",
+        "type": "delay",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 860,
+        "y": 260,
+        "wires": [
+            [
+                "c10381c90a08f2ca"
+            ]
+        ]
+    },
+    {
+        "id": "c10381c90a08f2ca",
+        "type": "shutdown",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "x": 1100,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "764cf0b9ffcc9d48",
+        "type": "PID",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "setpoint": "35",
+        "pb": "5",
+        "ti": "60",
+        "td": 0,
+        "integral_default": 0.5,
+        "smooth_factor": 3,
+        "max_interval": "60",
+        "enable": 1,
+        "disabled_op": "1",
+        "x": 1130,
+        "y": 440,
+        "wires": [
+            [
+                "eb1a6a4a31f590a1",
+                "b94d609e27c49af2"
+            ]
+        ]
+    },
+    {
+        "id": "b94d609e27c49af2",
+        "type": "debug",
+        "z": "0f4b8546c8ac122a",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b6a0fc013c579c59",
+        "type": "ui_ui_control",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "events": "all",
+        "x": 620,
+        "y": 1180,
+        "wires": [
+            [
+                "7ece910735b4e111",
+                "7279db9a453b253a"
+            ]
+        ]
+    },
+    {
+        "id": "7ece910735b4e111",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Set tab 1 on startup",
+        "func": "if (msg.payload === 'startup' || msg.payload === 'connect') {\n    flow.set('startup', true);\n    node.status({fill:\"green\",shape:\"ring\",text:msg.payload});\n}\nif (msg.payload === 'change') {\n    if (flow.get('startup')){\n        if (msg.tab == 0) {\n            msg.payload = \"+1\"\n            return msg;\n        }\n        flow.set('startup', false);\n    }\n    node.status({fill:\"blue\",shape:\"ring\",text:\"Tab: \" + msg.name});\n}\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1180,
+        "wires": [
+            [
+                "b6a0fc013c579c59",
+                "fbe4065c54914bf5"
+            ]
+        ]
+    },
+    {
+        "id": "8af4539a58b3630c",
+        "type": "inject",
+        "z": "0f4b8546c8ac122a",
+        "name": "Startup",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.1",
+        "topic": "",
+        "payload": "startup",
+        "payloadType": "str",
+        "x": 140,
+        "y": 1180,
+        "wires": [
+            [
+                "7ece910735b4e111"
+            ]
+        ]
+    },
+    {
+        "id": "4786f6488806d5b3",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Refresh tab 1",
+        "func": "if (msg.payload === '+1') {\n    msg.payload = \"\"\n    return msg;\n}\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1240,
+        "wires": [
+            [
+                "b6a0fc013c579c59",
+                "9126ef71c06d87f6"
+            ]
+        ]
+    },
+    {
+        "id": "fbe4065c54914bf5",
+        "type": "delay",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 1240,
+        "wires": [
+            [
+                "4786f6488806d5b3"
+            ]
+        ]
+    },
+    {
+        "id": "9126ef71c06d87f6",
+        "type": "delay",
+        "z": "0f4b8546c8ac122a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 1300,
+        "wires": [
+            [
+                "5afe66d905627a8b"
+            ]
+        ]
+    },
+    {
+        "id": "5afe66d905627a8b",
+        "type": "function",
+        "z": "0f4b8546c8ac122a",
+        "name": "Return to tab 0",
+        "func": "if (msg.payload === \"\") {\n    msg.payload = \"-1\"\n    return msg;\n}\nreturn;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1300,
+        "wires": [
+            [
+                "b6a0fc013c579c59"
+            ]
+        ]
+    },
+    {
+        "id": "7279db9a453b253a",
+        "type": "debug",
+        "z": "0f4b8546c8ac122a",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "e0fe7049739e3d44",
+        "type": "ui_chart",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "group": "0ff185a5517baaac",
+        "order": 1,
+        "width": "9",
+        "height": "12",
+        "label": "24hr Program",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff3c0a",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9c33ff",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1780,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6068eb5ab0e3a3b7",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Chart data format",
+        "func": "var run_prog = global.get('run_prog_array');\nconst dateTime = new Date();\nconst tzOffset = dateTime.getTimezoneOffset() * 60 * 1000;\n//const tzOffset = 43200000;\n\nmsg.payload = [{\n    \"series\": [\"\"],\n    \"data\": [[  { \"x\": (run_prog[0][0]) + tzOffset, \"y\": run_prog[0][1] },\n                { \"x\": (run_prog[1][0]) + tzOffset, \"y\": run_prog[1][1] },\n                { \"x\": (run_prog[2][0]) + tzOffset, \"y\": run_prog[2][1] },\n                { \"x\": (run_prog[3][0]) + tzOffset, \"y\": run_prog[3][1] },\n                { \"x\": (run_prog[4][0]) + tzOffset, \"y\": run_prog[4][1] },\n                { \"x\": (run_prog[5][0]) + tzOffset, \"y\": run_prog[5][1] },\n                { \"x\": (run_prog[6][0]) + tzOffset, \"y\": run_prog[6][1] },\n                { \"x\": (run_prog[7][0]) + tzOffset, \"y\": run_prog[7][1] },\n                { \"x\": (run_prog[8][0]) + tzOffset, \"y\": run_prog[8][1] },\n                { \"x\": (run_prog[9][0]) + tzOffset, \"y\": run_prog[9][1] },\n                { \"x\": (run_prog[10][0]) + tzOffset, \"y\": run_prog[10][1] },\n                { \"x\": (run_prog[11][0]) + tzOffset, \"y\": run_prog[11][1] },\n                { \"x\": (run_prog[12][0]) + tzOffset, \"y\": run_prog[12][1] },\n                { \"x\": (run_prog[13][0]) + tzOffset, \"y\": run_prog[13][1] },\n                { \"x\": (run_prog[14][0]) + tzOffset, \"y\": run_prog[14][1] },\n                { \"x\": (run_prog[15][0]) + tzOffset, \"y\": run_prog[15][1] },\n                { \"x\": (run_prog[16][0]) + tzOffset, \"y\": run_prog[16][1] },\n                { \"x\": (run_prog[17][0]) + tzOffset, \"y\": run_prog[17][1] },\n                { \"x\": (run_prog[18][0]) + tzOffset, \"y\": run_prog[18][1] },\n                { \"x\": (run_prog[19][0]) + tzOffset, \"y\": run_prog[19][1] }]],\n    \"labels\": [ \"\" ]\n}]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1530,
+        "y": 1460,
+        "wires": [
+            [
+                "e0fe7049739e3d44"
+            ]
+        ]
+    },
+    {
+        "id": "37be6b08bb7b5ded",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 100,
+        "wires": [
+            [
+                "c8298a8bfd0bf14c"
+            ]
+        ]
+    },
+    {
+        "id": "b05d984379a690f3",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 140,
+        "wires": [
+            [
+                "c8298a8bfd0bf14c"
+            ]
+        ]
+    },
+    {
+        "id": "2c385202dbfd02f5",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "1:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c8298a8bfd0bf14c",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 1 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[0][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 140,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "30207f6089600dea",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 240,
+        "wires": [
+            [
+                "afd0b78dc9c1cd95"
+            ]
+        ]
+    },
+    {
+        "id": "f6be666e2bff7b2b",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "2:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "afd0b78dc9c1cd95",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 2 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[1][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 280,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "0e88c65c0a2e1a30",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 380,
+        "wires": [
+            [
+                "db2075fa737216a9"
+            ]
+        ]
+    },
+    {
+        "id": "378d7aca71d3e3ea",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 7,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "3:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "db2075fa737216a9",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 3 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[2][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 420,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "1d411890ecb34816",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 11,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 520,
+        "wires": [
+            [
+                "2170faf571c53870"
+            ]
+        ]
+    },
+    {
+        "id": "cf9d0f96e4537153",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 10,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "4:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "2170faf571c53870",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 4 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[3][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 560,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "3810d7dcd8f5c406",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 14,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 660,
+        "wires": [
+            [
+                "249216229fee2538"
+            ]
+        ]
+    },
+    {
+        "id": "e7d5f66885281162",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 13,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "5:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "249216229fee2538",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 5 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[4][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 700,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "5c4a72a80e595efe",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 17,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 800,
+        "wires": [
+            [
+                "9330a45513cc270f"
+            ]
+        ]
+    },
+    {
+        "id": "31a7cfcc563cc29d",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 16,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "6:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "9330a45513cc270f",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 6 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[5][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 840,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "91df5d6c4e9a2604",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 20,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 940,
+        "wires": [
+            [
+                "f71ec791d2704c03"
+            ]
+        ]
+    },
+    {
+        "id": "a79810ec85aab1b0",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 19,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "7:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "f71ec791d2704c03",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 7 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[6][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 980,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "f998e215680dfac8",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Init globals",
+        "func": "var run_prog_restore = global.get('run_prog_array');\n\nvar msg1 = {payload: run_prog_restore[0][0]};\nvar msg2 = {payload: run_prog_restore[0][1]};\nvar msg3 = {payload: run_prog_restore[1][0]};\nvar msg4 = {payload: run_prog_restore[1][1]};\nvar msg5 = {payload: run_prog_restore[2][0]};\nvar msg6 = {payload: run_prog_restore[2][1]};\nvar msg7 = {payload: run_prog_restore[3][0]};\nvar msg8 = {payload: run_prog_restore[3][1]};\nvar msg9 = {payload: run_prog_restore[4][0]};\nvar msg10 = {payload: run_prog_restore[4][1]};\nvar msg11 = {payload: run_prog_restore[5][0]};\nvar msg12 = {payload: run_prog_restore[5][1]};\nvar msg13 = {payload: run_prog_restore[6][0]};\nvar msg14 = {payload: run_prog_restore[6][1]};\nvar msg15 = {payload: run_prog_restore[7][0]};\nvar msg16 = {payload: run_prog_restore[7][1]};\nvar msg17 = {payload: run_prog_restore[8][0]};\nvar msg18 = {payload: run_prog_restore[8][1]};\nvar msg19 = {payload: run_prog_restore[9][0]};\nvar msg20 = {payload: run_prog_restore[9][1]};\nvar msg21 = {payload: run_prog_restore[10][0]};\nvar msg22 = {payload: run_prog_restore[10][1]};\nvar msg23 = {payload: run_prog_restore[11][0]};\nvar msg24 = {payload: run_prog_restore[11][1]};\nvar msg25 = {payload: run_prog_restore[12][0]};\nvar msg26 = {payload: run_prog_restore[12][1]};\nvar msg27 = {payload: run_prog_restore[13][0]};\nvar msg28 = {payload: run_prog_restore[13][1]};\nvar msg29 = {payload: run_prog_restore[14][0]};\nvar msg30 = {payload: run_prog_restore[14][1]};\nvar msg31 = {payload: run_prog_restore[15][0]};\nvar msg32 = {payload: run_prog_restore[15][1]};\nvar msg33 = { payload: run_prog_restore[16][0] };\nvar msg34 = { payload: run_prog_restore[16][1] };\nvar msg35 = { payload: run_prog_restore[17][0] };\nvar msg36 = { payload: run_prog_restore[17][1] };\nvar msg37 = { payload: run_prog_restore[18][0] };\nvar msg38 = { payload: run_prog_restore[18][1] };\nvar msg39 = { payload: run_prog_restore[19][0] };\nvar msg40 = { payload: run_prog_restore[19][1] };\n\nreturn [msg1,\n        msg2,\n        msg3,\n        msg4,\n        msg5,\n        msg6,\n        msg7,\n        msg8,\n        msg9,\n        msg10,\n        msg11,\n        msg12,\n        msg13,\n        msg14,\n        msg15,\n        msg16,\n        msg17,\n        msg18,\n        msg19,\n        msg20,\n        msg21,\n        msg22,\n        msg23,\n        msg24,\n        msg25,\n        msg26,\n        msg27,\n        msg28,\n        msg29,\n        msg30,\n        msg31,\n        msg32,\n        msg33,\n        msg34,\n        msg35,\n        msg36,\n        msg37,\n        msg38,\n        msg39];",
+        "outputs": 40,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n//let run_prog_array_template = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];\n//global.set('run_prog_array', run_prog_array_template);",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1440,
+        "wires": [
+            [
+                "37be6b08bb7b5ded"
+            ],
+            [
+                "b05d984379a690f3"
+            ],
+            [
+                "30207f6089600dea"
+            ],
+            [
+                "5eeab28a03237bd2"
+            ],
+            [
+                "0e88c65c0a2e1a30"
+            ],
+            [
+                "02ccbc5ad29a1766"
+            ],
+            [
+                "1d411890ecb34816"
+            ],
+            [
+                "e07154619a888351"
+            ],
+            [
+                "3810d7dcd8f5c406"
+            ],
+            [
+                "2dfd87b4a4a28121"
+            ],
+            [
+                "5c4a72a80e595efe"
+            ],
+            [
+                "99d199e0e446dd2a"
+            ],
+            [
+                "91df5d6c4e9a2604"
+            ],
+            [
+                "30347e1551791346"
+            ],
+            [
+                "7db22541d7b32fba"
+            ],
+            [
+                "3a060b06f8ffb3e8"
+            ],
+            [
+                "5b9c445034d001fd"
+            ],
+            [
+                "7996f5847a1b0e52"
+            ],
+            [
+                "e6e1d5a0adeb88ee"
+            ],
+            [
+                "07a3853522d91277"
+            ],
+            [
+                "ae7fb676689c6f7b"
+            ],
+            [
+                "1508e1615d9b9885"
+            ],
+            [
+                "02de6305bc1f7b21"
+            ],
+            [
+                "348ae684e9569281"
+            ],
+            [
+                "fc6f1681193d627c"
+            ],
+            [
+                "4a269fee979fe18c"
+            ],
+            [
+                "8d9fc8a0b0ef5169"
+            ],
+            [
+                "147f627ccc29a481"
+            ],
+            [
+                "f8ca7f87ddcbf163"
+            ],
+            [
+                "7ddb1434c86fb999"
+            ],
+            [
+                "6f6ad84bf02d9be3"
+            ],
+            [
+                "e3d8a5f18ed70c99"
+            ],
+            [
+                "221eca85ad91db6f"
+            ],
+            [
+                "88872e072fd37772"
+            ],
+            [
+                "475c26212f535cf0"
+            ],
+            [
+                "8f823a1ce0e817b3"
+            ],
+            [
+                "7597f8ec1e3653ae"
+            ],
+            [
+                "fb0fe1afa827f7dd"
+            ],
+            [
+                "3ce0f6323c799c60"
+            ],
+            [
+                "d3eea44908c672b2"
+            ]
+        ]
+    },
+    {
+        "id": "5eeab28a03237bd2",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 280,
+        "wires": [
+            [
+                "afd0b78dc9c1cd95"
+            ]
+        ]
+    },
+    {
+        "id": "02ccbc5ad29a1766",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 9,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 420,
+        "wires": [
+            [
+                "db2075fa737216a9"
+            ]
+        ]
+    },
+    {
+        "id": "e07154619a888351",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 12,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 560,
+        "wires": [
+            [
+                "2170faf571c53870"
+            ]
+        ]
+    },
+    {
+        "id": "2dfd87b4a4a28121",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 15,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 700,
+        "wires": [
+            [
+                "249216229fee2538"
+            ]
+        ]
+    },
+    {
+        "id": "99d199e0e446dd2a",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 18,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 840,
+        "wires": [
+            [
+                "9330a45513cc270f"
+            ]
+        ]
+    },
+    {
+        "id": "30347e1551791346",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 21,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 980,
+        "wires": [
+            [
+                "f71ec791d2704c03"
+            ]
+        ]
+    },
+    {
+        "id": "9b567e6c46adece5",
+        "type": "inject",
+        "z": "2a758133b0094d6f",
+        "name": "Startup",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 640,
+        "y": 1020,
+        "wires": [
+            [
+                "f998e215680dfac8"
+            ]
+        ]
+    },
+    {
+        "id": "7db22541d7b32fba",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 23,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 1080,
+        "wires": [
+            [
+                "c121856226e93da3"
+            ]
+        ]
+    },
+    {
+        "id": "64fc38b0386ff3e4",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 22,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "8:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "c121856226e93da3",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 8 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[7][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1120,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "3a060b06f8ffb3e8",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 24,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 1120,
+        "wires": [
+            [
+                "c121856226e93da3"
+            ]
+        ]
+    },
+    {
+        "id": "5b9c445034d001fd",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 26,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 1220,
+        "wires": [
+            [
+                "7d5b87a650d73992"
+            ]
+        ]
+    },
+    {
+        "id": "fefe5a56aee41206",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 25,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "9:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "7d5b87a650d73992",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 9 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[8][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1260,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "7996f5847a1b0e52",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 27,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 1260,
+        "wires": [
+            [
+                "7d5b87a650d73992"
+            ]
+        ]
+    },
+    {
+        "id": "e6e1d5a0adeb88ee",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 29,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 1360,
+        "wires": [
+            [
+                "6598a2961546bbb1"
+            ]
+        ]
+    },
+    {
+        "id": "54bb5cdb2bce3108",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 28,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "10:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "6598a2961546bbb1",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 10 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[9][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 1400,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "07a3853522d91277",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 30,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 1400,
+        "wires": [
+            [
+                "6598a2961546bbb1"
+            ]
+        ]
+    },
+    {
+        "id": "ae7fb676689c6f7b",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 32,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 1500,
+        "wires": [
+            [
+                "1784bb78112b5e1b"
+            ]
+        ]
+    },
+    {
+        "id": "ca380ab2ad19489c",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 31,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "11:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "1784bb78112b5e1b",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 11 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[10][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 1540,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "1508e1615d9b9885",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 33,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 1540,
+        "wires": [
+            [
+                "1784bb78112b5e1b"
+            ]
+        ]
+    },
+    {
+        "id": "02de6305bc1f7b21",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 35,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 1640,
+        "wires": [
+            [
+                "e05778ed512a44bf"
+            ]
+        ]
+    },
+    {
+        "id": "6d38302720513dcc",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 34,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "12:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "e05778ed512a44bf",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 12 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[11][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 1680,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "348ae684e9569281",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 36,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 1680,
+        "wires": [
+            [
+                "e05778ed512a44bf"
+            ]
+        ]
+    },
+    {
+        "id": "fc6f1681193d627c",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 38,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 1780,
+        "wires": [
+            [
+                "f82da5b6730c19d5"
+            ]
+        ]
+    },
+    {
+        "id": "2735623dc05ff58a",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 37,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "13:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "f82da5b6730c19d5",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 13 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[12][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 1820,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "4a269fee979fe18c",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 39,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 1820,
+        "wires": [
+            [
+                "f82da5b6730c19d5"
+            ]
+        ]
+    },
+    {
+        "id": "8d9fc8a0b0ef5169",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 41,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 1920,
+        "wires": [
+            [
+                "53710d10c05b9709"
+            ]
+        ]
+    },
+    {
+        "id": "76fd7490b38239c9",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 40,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "14:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "53710d10c05b9709",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 14 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[13][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 1960,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "147f627ccc29a481",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 42,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 1960,
+        "wires": [
+            [
+                "53710d10c05b9709"
+            ]
+        ]
+    },
+    {
+        "id": "f8ca7f87ddcbf163",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 44,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 2060,
+        "wires": [
+            [
+                "2f2116230a448a93"
+            ]
+        ]
+    },
+    {
+        "id": "8eb2a13474cc22f2",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 43,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "15:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "2f2116230a448a93",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 15 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[14][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 2100,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "7ddb1434c86fb999",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 45,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 2100,
+        "wires": [
+            [
+                "2f2116230a448a93"
+            ]
+        ]
+    },
+    {
+        "id": "6f6ad84bf02d9be3",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 47,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 2200,
+        "wires": [
+            [
+                "4106db771373faa1"
+            ]
+        ]
+    },
+    {
+        "id": "941f49074473a80f",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 46,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "16:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "4106db771373faa1",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 16 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[15][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 2240,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "e3d8a5f18ed70c99",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 48,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 2240,
+        "wires": [
+            [
+                "4106db771373faa1"
+            ]
+        ]
+    },
+    {
+        "id": "221eca85ad91db6f",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 50,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 2340,
+        "wires": [
+            [
+                "cc29136194cfc4d8"
+            ]
+        ]
+    },
+    {
+        "id": "7ae83e2d27c25383",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 49,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "17:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "cc29136194cfc4d8",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 17 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[16][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 2380,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "88872e072fd37772",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 51,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 2380,
+        "wires": [
+            [
+                "cc29136194cfc4d8"
+            ]
+        ]
+    },
+    {
+        "id": "475c26212f535cf0",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 53,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 2480,
+        "wires": [
+            [
+                "63e1b11e1e07e380"
+            ]
+        ]
+    },
+    {
+        "id": "5e93bf9991e8bf84",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 52,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "18:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 2440,
+        "wires": []
+    },
+    {
+        "id": "63e1b11e1e07e380",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 18 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[17][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 2520,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "8f823a1ce0e817b3",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 54,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 2520,
+        "wires": [
+            [
+                "63e1b11e1e07e380"
+            ]
+        ]
+    },
+    {
+        "id": "7597f8ec1e3653ae",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 56,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 2620,
+        "wires": [
+            [
+                "5473f6bc0782283f"
+            ]
+        ]
+    },
+    {
+        "id": "78630a5b43e3aa14",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 55,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "19:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 2580,
+        "wires": []
+    },
+    {
+        "id": "5473f6bc0782283f",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 19 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[18][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 2660,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "fb0fe1afa827f7dd",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 57,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 2660,
+        "wires": [
+            [
+                "5473f6bc0782283f"
+            ]
+        ]
+    },
+    {
+        "id": "3ce0f6323c799c60",
+        "type": "ui_text_input",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 59,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "time",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 960,
+        "y": 2760,
+        "wires": [
+            [
+                "0adc5236fbf51d19"
+            ]
+        ]
+    },
+    {
+        "id": "e2c1558696a9d772",
+        "type": "ui_text",
+        "z": "2a758133b0094d6f",
+        "group": "fed0412aa51fdfae",
+        "order": 58,
+        "width": "1",
+        "height": "1",
+        "name": "",
+        "label": "20:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 2720,
+        "wires": []
+    },
+    {
+        "id": "0adc5236fbf51d19",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "Point 20 store",
+        "func": "var ptr = 0;\nif(msg.topic == 'level') ptr = 1; \n\nvar run_prog_temp = global.get('run_prog_array');\n\nrun_prog_temp[19][ptr] = msg.payload;\n\nglobal.set('run_prog_array', run_prog_temp);\n\nmsg.payload = ptr\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 2800,
+        "wires": [
+            [
+                "6068eb5ab0e3a3b7"
+            ]
+        ]
+    },
+    {
+        "id": "d3eea44908c672b2",
+        "type": "ui_numeric",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "fed0412aa51fdfae",
+        "order": 60,
+        "width": "3",
+        "height": "1",
+        "wrap": false,
+        "passthru": true,
+        "topic": "level",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 960,
+        "y": 2800,
+        "wires": [
+            [
+                "0adc5236fbf51d19"
+            ]
+        ]
+    },
+    {
+        "id": "e6cd5d307a560167",
+        "type": "function",
+        "z": "2a758133b0094d6f",
+        "name": "function 2",
+        "func": "msg.payload = 56123358;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 100,
+        "wires": [
+            [
+                "37be6b08bb7b5ded"
+            ]
+        ]
+    },
+    {
+        "id": "60a299f3f4c48352",
+        "type": "inject",
+        "z": "2a758133b0094d6f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 530,
+        "y": 100,
+        "wires": [
+            [
+                "e6cd5d307a560167"
+            ]
+        ]
+    }
+]

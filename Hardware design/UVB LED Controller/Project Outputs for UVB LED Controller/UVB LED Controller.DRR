@@ -1,0 +1,25 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: UVB LED Controller.PcbDoc   21/02/2024  11:00:17 AM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII Plated RoundHoles File : UVB LED Controller-Plated.TXT
+ASCII Non-Plated RoundHoles File : UVB LED Controller-NonPlated.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.2mm (8mil)                                              Round             144       PTH        311.10mm (12.25inch)
+T2      0.3mm (12mil)                                             Round             139       PTH        736.82mm (29.01inch)
+T3      0.7mm (28mil)                                             Round             30        PTH        201.46mm (7.93inch)
+T4      0.711mm (28mil)                                           Round             1         PTH        0.00mm (0.00inch)
+T5      0.9mm (35mil)                                             Round             80        PTH        218.20mm (8.59inch)
+T6      1mm (39mil)                                               Round             20        PTH        51.40mm (2.02inch)
+T7      1.19mm (47mil)                                            Round             8         PTH        25.74mm (1.01inch)
+T8      1.2mm (47mil)                                             Round             12        PTH        27.94mm (1.10inch)
+T9      1.4mm (55mil)                                             Round             14        PTH        164.20mm (6.46inch)
+T10     3.2mm (126mil)                                            Round             4         PTH        301.01mm (11.85inch)
+T11     1.1mm (43mil)                                             Round             8         NPTH       135.10mm (5.32inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              460
+
+Total Processing Time (hh:mm:ss) : 00:00:00

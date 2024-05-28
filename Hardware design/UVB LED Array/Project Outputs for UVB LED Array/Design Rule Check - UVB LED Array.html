@@ -1,0 +1,436 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\Documents\Documents\Altium\AD23\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">21/02/2024</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:47:24 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc" class="file"><acronym title="D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc">D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">8</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">28</td></tr>
+</table>
+</td>
+</table><a name="IDT5BHQMRRUUBRISY0ILTQ0NHPAFPRTMBNWDXXQFNURPIHTDIS24HF"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLXUVGXPPSHHVPVEGPI1GARSYAIC5CIBNPKHFFPNOBU5SUQJULXPG">Unplated multi-layer pad(s) detected</a></td>
+<td class="column2">8</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">8</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0VUXBB12HCYQJC0Z4EGUDQEEXOLSPOHHC4UI5K2O23TY4RFTDMN">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOQAN0GOIMZZNOKK2DJRU5BZJBK0FJ12ATG0JAUNUPCGDIWEB2PRL">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDH1DHHCMH05F0KSXWDJOFH5Q2AFGK10XKZHZ3OYMTHW0TXHNBD2HL">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">12</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFAK5HPQJGDU2BXBUM4FUYI0T0M3OCVGQDCLUEAF3GZSTPNDUML4I">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHXVTCMJQDWFSMPUZGSIHLREXCHHY0SRJLI5SXCOHDASXZILZRV4D">Width Constraint (Min=0.2mm) (Max=10mm) (Preferred=1mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOCFI420FNRQZIZ3DTA3X1CW1BESBOZBKN3YLVXKAVISZUDADOO4N">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKC0VVXT4KX1HED4NLG3CWRC0RHAIKU4GO1N2JN41W1X1ETUNY1L">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">16</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEAPS51TDHAFVP34JJOXVPRRPKMAYW413QT4RG4EU4MTJ5NVECGDK">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZMZ1IPESNUFLOVSTC1SJADLANPE3LQTIWMNFWKMTY4BMMLRLDHLE">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXELEBCCW4MEEOB5CN1KHXMYCDEUJ2LLT1XCHGIPJ4RKWX31PWYNJ">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">28</td>
+</tr>
+</table><br><a name="IDMDMBNOPWO5JUIWN5LC5HGZRVEI5BSPA1DK3AJMLPQLIRNJT404EJ"><h2>Warnings</h2></a><a name="IDLXUVGXPPSHHVPVEGPI1GARSYAIC5CIBNPKHFFPNOBU5SUQJULXPG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Unplated multi-layer pad(s) detected</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8125.921mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=1913.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8125.921mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=1913.449mil|Absolute=True">Pad Free-(210mm,45mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5763.717mil|Location2.X=6047.307mil|Location1.Y=1728.283mil|Location2.Y=2011.874mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5763.717mil|Location2.X=6047.307mil|Location1.Y=1728.283mil|Location2.Y=2011.874mil|Absolute=True">Pad Free-(150mm,47.5mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3401.512mil|Location2.X=3685.102mil|Location1.Y=1728.283mil|Location2.Y=2011.874mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3401.512mil|Location2.X=3685.102mil|Location1.Y=1728.283mil|Location2.Y=2011.874mil|Absolute=True">Pad Free-(90mm,47.5mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=1322.898mil|Location1.Y=1728.283mil|Location2.Y=2011.874mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=1322.898mil|Location1.Y=1728.283mil|Location2.Y=2011.874mil|Absolute=True">Pad Free-(30mm,47.5mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8125.921mil|Location2.X=8409.512mil|Location1.Y=5074.74mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8125.921mil|Location2.X=8409.512mil|Location1.Y=5074.74mil|Location2.Y=5358.331mil|Absolute=True">Pad Free-(210mm,132.5mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5763.717mil|Location2.X=6047.307mil|Location1.Y=5074.74mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5763.717mil|Location2.X=6047.307mil|Location1.Y=5074.74mil|Location2.Y=5358.331mil|Absolute=True">Pad Free-(150mm,132.5mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3401.512mil|Location2.X=3685.102mil|Location1.Y=5074.74mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3401.512mil|Location2.X=3685.102mil|Location1.Y=5074.74mil|Location2.Y=5358.331mil|Absolute=True">Pad Free-(90mm,132.5mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=1322.898mil|Location1.Y=5074.74mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=1322.898mil|Location1.Y=5074.74mil|Location2.Y=5358.331mil|Absolute=True">Pad Free-(30mm,132.5mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1039.307mil|Location2.X=8409.512mil|Location1.Y=1629.858mil|Location2.Y=5358.331mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDH1DHHCMH05F0KSXWDJOFH5Q2AFGK10XKZHZ3OYMTHW0TXHNBD2HL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5752.717mil|Location2.X=6058.307mil|Location1.Y=5063.74mil|Location2.Y=5369.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5752.717mil|Location2.X=6058.307mil|Location1.Y=5063.74mil|Location2.Y=5369.331mil|Absolute=True">Un-Routed Net Constraint: Unplated Pad Free-(150mm,132.5mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5752.717mil|Location2.X=6058.307mil|Location1.Y=1717.283mil|Location2.Y=2022.874mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5752.717mil|Location2.X=6058.307mil|Location1.Y=1717.283mil|Location2.Y=2022.874mil|Absolute=True">Un-Routed Net Constraint: Unplated Pad Free-(150mm,47.5mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8114.921mil|Location2.X=8420.512mil|Location1.Y=5063.74mil|Location2.Y=5369.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8114.921mil|Location2.X=8420.512mil|Location1.Y=5063.74mil|Location2.Y=5369.331mil|Absolute=True">Un-Routed Net Constraint: Unplated Pad Free-(210mm,132.5mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8114.921mil|Location2.X=8420.512mil|Location1.Y=1618.858mil|Location2.Y=1924.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8114.921mil|Location2.X=8420.512mil|Location1.Y=1618.858mil|Location2.Y=1924.449mil|Absolute=True">Un-Routed Net Constraint: Unplated Pad Free-(210mm,45mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1028.307mil|Location2.X=1333.898mil|Location1.Y=5063.74mil|Location2.Y=5369.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1028.307mil|Location2.X=1333.898mil|Location1.Y=5063.74mil|Location2.Y=5369.331mil|Absolute=True">Un-Routed Net Constraint: Unplated Pad Free-(30mm,132.5mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1028.307mil|Location2.X=1333.898mil|Location1.Y=1717.283mil|Location2.Y=2022.874mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1028.307mil|Location2.X=1333.898mil|Location1.Y=1717.283mil|Location2.Y=2022.874mil|Absolute=True">Un-Routed Net Constraint: Unplated Pad Free-(30mm,47.5mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3390.512mil|Location2.X=3696.102mil|Location1.Y=5063.74mil|Location2.Y=5369.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3390.512mil|Location2.X=3696.102mil|Location1.Y=5063.74mil|Location2.Y=5369.331mil|Absolute=True">Un-Routed Net Constraint: Unplated Pad Free-(90mm,132.5mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3390.512mil|Location2.X=3696.102mil|Location1.Y=1717.283mil|Location2.Y=2022.874mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3390.512mil|Location2.X=3696.102mil|Location1.Y=1717.283mil|Location2.Y=2022.874mil|Absolute=True">Un-Routed Net Constraint: Unplated Pad Free-(90mm,47.5mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1974.347mil|Location2.X=2139.827mil|Location1.Y=1125.921mil|Location2.Y=1220.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1974.347mil|Location2.X=2139.827mil|Location1.Y=1125.921mil|Location2.Y=1220.535mil|Absolute=True">Un-Routed Net Constraint: Net D_GND Between Pad J4-4(50.75mm,29.8mm) on Top Layer [Unplated] And Pad J4-6(53.75mm,29.8mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4466.929mil|Location2.X=4981.89mil|Location1.Y=4909.842mil|Location2.Y=5109.842mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4466.929mil|Location2.X=4981.89mil|Location1.Y=4909.842mil|Location2.Y=5109.842mil|Absolute=True">Un-Routed Net Constraint: Net +CC2 Between Track (92.928mm,127.25mm)(116mm,127.25mm) on Top Layer And Track (124mm,127.25mm)(147.072mm,127.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6829.134mil|Location2.X=7344.095mil|Location1.Y=4909.842mil|Location2.Y=5109.842mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6829.134mil|Location2.X=7344.095mil|Location1.Y=4909.842mil|Location2.Y=5109.842mil|Absolute=True">Un-Routed Net Constraint: Net +CC1 Between Track (152.928mm,127.25mm)(176mm,127.25mm) on Top Layer And Track (184mm,127.25mm)(195mm,127.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2104.724mil|Location2.X=2619.685mil|Location1.Y=4909.842mil|Location2.Y=5109.842mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2104.724mil|Location2.X=2619.685mil|Location1.Y=4909.842mil|Location2.Y=5109.842mil|Absolute=True">Un-Routed Net Constraint: Net +CC3 Between Track (32.928mm,127.25mm)(56mm,127.25mm) on Top Layer And Track (64mm,127.25mm)(87.072mm,127.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDKC0VVXT4KX1HED4NLG3CWRC0RHAIKU4GO1N2JN41W1X1ETUNY1L"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5841.895mil|Location2.X=5969.129mil|Location1.Y=5152.918mil|Location2.Y=5280.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5841.895mil|Location2.X=5969.129mil|Location1.Y=5152.918mil|Location2.Y=5280.153mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-(150mm,132.5mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5841.895mil|Location2.X=5969.129mil|Location1.Y=1806.462mil|Location2.Y=1933.696mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5841.895mil|Location2.X=5969.129mil|Location1.Y=1806.462mil|Location2.Y=1933.696mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-(150mm,47.5mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8204.099mil|Location2.X=8331.334mil|Location1.Y=5152.918mil|Location2.Y=5280.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8204.099mil|Location2.X=8331.334mil|Location1.Y=5152.918mil|Location2.Y=5280.153mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-(210mm,132.5mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8204.099mil|Location2.X=8331.334mil|Location1.Y=1708.036mil|Location2.Y=1835.271mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8204.099mil|Location2.X=8331.334mil|Location1.Y=1708.036mil|Location2.Y=1835.271mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-(210mm,45mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1117.485mil|Location2.X=1244.719mil|Location1.Y=5152.918mil|Location2.Y=5280.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1117.485mil|Location2.X=1244.719mil|Location1.Y=5152.918mil|Location2.Y=5280.153mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-(30mm,132.5mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1117.485mil|Location2.X=1244.719mil|Location1.Y=1806.462mil|Location2.Y=1933.696mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1117.485mil|Location2.X=1244.719mil|Location1.Y=1806.462mil|Location2.Y=1933.696mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-(30mm,47.5mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3479.69mil|Location2.X=3606.924mil|Location1.Y=5152.918mil|Location2.Y=5280.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3479.69mil|Location2.X=3606.924mil|Location1.Y=5152.918mil|Location2.Y=5280.153mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-(90mm,132.5mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3479.69mil|Location2.X=3606.924mil|Location1.Y=1806.462mil|Location2.Y=1933.696mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3479.69mil|Location2.X=3606.924mil|Location1.Y=1806.462mil|Location2.Y=1933.696mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-(90mm,47.5mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5989.533mil|Location2.X=6608.893mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5989.533mil|Location2.X=6608.893mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True">Hole Size Constraint: (15.7mm &gt; 2.54mm) Pad J1-(160mm,25mm) on Multi-Layer Actual Rectangular Hole Width = 15.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5989.533mil|Location2.X=6608.893mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5989.533mil|Location2.X=6608.893mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True">Hole Size Constraint: (7mm &gt; 2.54mm) Pad J1-(160mm,25mm) on Multi-Layer Actual Rectangular Hole Height = 7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4414.729mil|Location2.X=5034.09mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4414.729mil|Location2.X=5034.09mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True">Hole Size Constraint: (15.7mm &gt; 2.54mm) Pad J2-(120mm,25mm) on Multi-Layer Actual Rectangular Hole Width = 15.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4414.729mil|Location2.X=5034.09mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4414.729mil|Location2.X=5034.09mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True">Hole Size Constraint: (7mm &gt; 2.54mm) Pad J2-(120mm,25mm) on Multi-Layer Actual Rectangular Hole Height = 7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2839.926mil|Location2.X=3459.286mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2839.926mil|Location2.X=3459.286mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True">Hole Size Constraint: (15.7mm &gt; 2.54mm) Pad J3-(80mm,25mm) on Multi-Layer Actual Rectangular Hole Width = 15.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2839.926mil|Location2.X=3459.286mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2839.926mil|Location2.X=3459.286mil|Location1.Y=674.572mil|Location2.Y=1293.932mil|Absolute=True">Hole Size Constraint: (7mm &gt; 2.54mm) Pad J3-(80mm,25mm) on Multi-Layer Actual Rectangular Hole Height = 7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1717.879mil|Location2.X=2219.129mil|Location1.Y=733.627mil|Location2.Y=1234.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1717.879mil|Location2.X=2219.129mil|Location1.Y=733.627mil|Location2.Y=1234.877mil|Absolute=True">Hole Size Constraint: (12.7mm &gt; 2.54mm) Pad J4-(50mm,25mm) on Multi-Layer Actual Rectangular Hole Width = 12.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1717.879mil|Location2.X=2219.129mil|Location1.Y=733.627mil|Location2.Y=1234.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1717.879mil|Location2.X=2219.129mil|Location1.Y=733.627mil|Location2.Y=1234.877mil|Absolute=True">Hole Size Constraint: (7mm &gt; 2.54mm) Pad J4-(50mm,25mm) on Multi-Layer Actual Rectangular Hole Height = 7mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

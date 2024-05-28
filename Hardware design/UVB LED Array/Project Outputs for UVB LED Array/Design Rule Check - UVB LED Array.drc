@@ -1,0 +1,77 @@
+Protel Design System Design Rule Check
+PCB File : D:\Documents\Documents\Altium\Projects\UVB LED Array\UVB LED Array.PcbDoc
+Date     : 21/02/2024
+Time     : 10:47:24 AM
+
+WARNING: Unplated multi-layer pad(s) detected
+   Pad Free-(210mm,45mm) on Multi-Layer on Net GND
+   Pad Free-(150mm,47.5mm) on Multi-Layer on Net GND
+   Pad Free-(90mm,47.5mm) on Multi-Layer on Net GND
+   Pad Free-(30mm,47.5mm) on Multi-Layer on Net GND
+   Pad Free-(210mm,132.5mm) on Multi-Layer on Net GND
+   Pad Free-(150mm,132.5mm) on Multi-Layer on Net GND
+   Pad Free-(90mm,132.5mm) on Multi-Layer on Net GND
+   Pad Free-(30mm,132.5mm) on Multi-Layer on Net GND
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Unplated Pad Free-(150mm,132.5mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Unplated Pad Free-(150mm,47.5mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Unplated Pad Free-(210mm,132.5mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Unplated Pad Free-(210mm,45mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Unplated Pad Free-(30mm,132.5mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Unplated Pad Free-(30mm,47.5mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Unplated Pad Free-(90mm,132.5mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Unplated Pad Free-(90mm,47.5mm) on Multi-Layer 
+   Violation between Un-Routed Net Constraint: Net D_GND Between Pad J4-4(50.75mm,29.8mm) on Top Layer [Unplated] And Pad J4-6(53.75mm,29.8mm) on Top Layer [Unplated] 
+   Violation between Un-Routed Net Constraint: Net +CC2 Between Track (92.928mm,127.25mm)(116mm,127.25mm) on Top Layer And Track (124mm,127.25mm)(147.072mm,127.25mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +CC1 Between Track (152.928mm,127.25mm)(176mm,127.25mm) on Top Layer And Track (184mm,127.25mm)(195mm,127.25mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net +CC3 Between Track (32.928mm,127.25mm)(56mm,127.25mm) on Top Layer And Track (64mm,127.25mm)(87.072mm,127.25mm) on Top Layer 
+Rule Violations :12
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=10mm) (Preferred=1mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
+   Violation between Hole Size Constraint: (3.2mm > 2.54mm) Pad Free-(150mm,132.5mm) on Multi-Layer Actual Hole Size = 3.2mm
+   Violation between Hole Size Constraint: (3.2mm > 2.54mm) Pad Free-(150mm,47.5mm) on Multi-Layer Actual Hole Size = 3.2mm
+   Violation between Hole Size Constraint: (3.2mm > 2.54mm) Pad Free-(210mm,132.5mm) on Multi-Layer Actual Hole Size = 3.2mm
+   Violation between Hole Size Constraint: (3.2mm > 2.54mm) Pad Free-(210mm,45mm) on Multi-Layer Actual Hole Size = 3.2mm
+   Violation between Hole Size Constraint: (3.2mm > 2.54mm) Pad Free-(30mm,132.5mm) on Multi-Layer Actual Hole Size = 3.2mm
+   Violation between Hole Size Constraint: (3.2mm > 2.54mm) Pad Free-(30mm,47.5mm) on Multi-Layer Actual Hole Size = 3.2mm
+   Violation between Hole Size Constraint: (3.2mm > 2.54mm) Pad Free-(90mm,132.5mm) on Multi-Layer Actual Hole Size = 3.2mm
+   Violation between Hole Size Constraint: (3.2mm > 2.54mm) Pad Free-(90mm,47.5mm) on Multi-Layer Actual Hole Size = 3.2mm
+   Violation between Hole Size Constraint: (15.7mm > 2.54mm) Pad J1-(160mm,25mm) on Multi-Layer Actual Rectangular Hole Width = 15.7mm
+   Violation between Hole Size Constraint: (7mm > 2.54mm) Pad J1-(160mm,25mm) on Multi-Layer Actual Rectangular Hole Height = 7mm
+   Violation between Hole Size Constraint: (15.7mm > 2.54mm) Pad J2-(120mm,25mm) on Multi-Layer Actual Rectangular Hole Width = 15.7mm
+   Violation between Hole Size Constraint: (7mm > 2.54mm) Pad J2-(120mm,25mm) on Multi-Layer Actual Rectangular Hole Height = 7mm
+   Violation between Hole Size Constraint: (15.7mm > 2.54mm) Pad J3-(80mm,25mm) on Multi-Layer Actual Rectangular Hole Width = 15.7mm
+   Violation between Hole Size Constraint: (7mm > 2.54mm) Pad J3-(80mm,25mm) on Multi-Layer Actual Rectangular Hole Height = 7mm
+   Violation between Hole Size Constraint: (12.7mm > 2.54mm) Pad J4-(50mm,25mm) on Multi-Layer Actual Rectangular Hole Width = 12.7mm
+   Violation between Hole Size Constraint: (7mm > 2.54mm) Pad J4-(50mm,25mm) on Multi-Layer Actual Rectangular Hole Height = 7mm
+Rule Violations :16
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 28
+Waived Violations : 0
+Time Elapsed        : 00:00:01

@@ -1,0 +1,16 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: UVB LED Array.PcbDoc   21/02/2024  10:54:01 AM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : UVB LED Array.TXT
+ASCII RectHoles File : UVB LED Array-RectHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      3.2mm (126mil)                                            Round             8         NPTH       559.11mm (22.01inch)
+T2      7mm (276mil)                                              Rectangle         4         NPTH       274.90mm (10.82inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              12
+
+Total Processing Time (hh:mm:ss) : 00:00:00
