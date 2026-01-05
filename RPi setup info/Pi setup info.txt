@@ -2,7 +2,7 @@ Hardware: RPi 4b 8GB RAM + DS1307 based RTC module + DF Robot 7" LCD display mod
 Pi image: Debian Bullseye (Legacy, 64-bit) Full
 
 Username: admin
-Password: Andover1221!
+Password: andover1221!
 
 -------------------------------------------------------------------------------
                      --- Software packages installed ---
@@ -48,7 +48,7 @@ sudo i2cdetect -y 1
 Check that the RTC is present on I2C bus (address 68 for DS1307 module)
 
 Edit the boot file:
-sudo nano /boot/config.txt
+sudo nano /boot/firmware/config.txt
 
 Add line to end of file:
 dtoverlay=i2c-rtc,ds1307
@@ -83,12 +83,12 @@ Source - https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set
 Setup desktop to run chromium in kiosk mode:
 
 Create autostart file in user home directory:
-mkdir /home/pi/.config/lxsession
-mkdir /home/pi/.config/lxsession/LXDE-pi
-cp /etc/xdg/lxsession/LXDE-pi/autostart /home/pi/.config/lxsession/LXDE-pi/
+mkdir /home/admin/.config/lxsession
+mkdir /home/admin/.config/lxsession/LXDE-pi
+cp /etc/xdg/lxsession/LXDE-pi/autostart /home/admin/.config/lxsession/LXDE-pi/
 
 Edit to add chromium to autostart:
-nano /home/pi/.config/lxsession/LXDE-pi/autostart
+nano /home/admin/.config/lxsession/LXDE-pi/autostart
 
 Add line:
 @chromium-browser --kiosk
