@@ -3,11 +3,12 @@ Pi image: Debian Bullseye (Legacy, 64-bit) Full (Fisrt orange unit), Debian Book
 
 Username: admin
 Password: andover1221!
+Hostname: uv-control
 
 -------------------------------------------------------------------------------
                      --- Software packages installed ---
 sudo raspi-config
-Turn on I2C and SPI (I2C only for newer unit, on-board MCU handles PWM and ADC!)
+Turn on I2C and SPI for older (orange) unit, I2C and Serial for newer (blue) unit - disable serial terminal over UART and enable UART.
 reboot
 
 --------
@@ -25,7 +26,7 @@ bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/mast
 --------
 
 Node Red settings changes:
-nano .nodered/settings.js
+nano .node-red/settings.js
 
 Add configuration page url:
 httpAdminRoot: '/config',
@@ -39,6 +40,12 @@ contextStorage: {
 
 Change dashboard UI URL to site root:
 ui: { path: "/" },
+
+Save and exit
+
+Set node-red to run on startup
+sudo systemctl enable nodered
+sudo systemctl start nodered
 
 --------
 
@@ -80,6 +87,18 @@ Source - https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set
 
 --------
 
+NodeRed setup:
+Connect unit to the network
+Browse to http://uv-control.scion.local:1880/config
+Go to Import and paste in the relevant flow (UVControlFlow_xx-xx-xxxx.json)
+
+NodeRed should install missing libraries, if not install them manually
+Reboot to start dashboard properly
+
+sudo reboot
+
+--------
+
 Setup desktop to run chromium in kiosk mode:
 
 Debian Bookworm onwards ---------->
@@ -111,6 +130,8 @@ chmod 644 ~/.config/autostart/chromium.desktop
 Restart and test
 
 sudo reboot
+
+When the keyring password prompt appears, save with no password and accept the unencrypted keyring warning.
 
 ---------------------------------|
 
